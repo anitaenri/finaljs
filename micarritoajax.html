@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda Electrónica</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="sweetalert2.all.min.js"></script>
+	<script type="text/javascript" src="proceso.js"></script>
+
+
+
+	
+</head>
+<body>
+
+
+
+
+  <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="container">
+	 <div class="row">
+     
+           <h2 style="color:blue;"> Tienda Electrónica</h2>
+        </div>
+        <div class="row">
+     
+            <main id="items" class="col-sm-8 row"></main>
+
+            <aside class="col-sm-4">
+                <h2  style="color:blue;">Carrito de Compras</h2>
+         
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+       
+                <p class="text-right"><strong>Monto Total</strong>: <span id="total"></span>$</p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar Carrito</button>
+				<br/>
+				<br/>
+				
+							
+				<form>				  
+					<div class="form-group">
+						<label for="nombre">Nombre:</label>
+						<input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+					</div>
+				</form>
+				
+				<br/>
+				<button  style="margin-left: 67px;" class="btn btn-primary btn-lg" onclick="myFunction()">Finalizar la Compra</button>
+            </aside>
+        </div>
+    </div>
+		
+    <footer class="bg-dark p-3 mt-5">
+        <p class="text-center m-0 text-muted">Analía Enrique | Tienda de Electrónica</p>
+    </footer>
+	
+    <script>
+        function myFunction() {
+          
+          //alert('Muchas gracias por elegirnos '+ nombre.value + '! Si necesitás más tiempo, tus productos quedarán en el carrito.')
+          
+          Swal.fire(
+          'Muchas gracias por elegirnos ' +nombre.value + ' !',
+          'Si necesitás más tiempo, tus productos quedarán en el carrito!' +nombre.value ,
+          'success'
+        )
+        }
+        
+        
+        </script>
+
+</body>
+
+
+</html>
+
+
+
+
+         
